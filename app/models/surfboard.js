@@ -1,12 +1,20 @@
 const mongoose = require('mongoose')
 
-const exampleSchema = new mongoose.Schema(
+const surfboard = new mongoose.Schema(
 	{
-		title: {
+		type: {
 			type: String,
 			required: true,
 		},
-		text: {
+		height: {
+			type: Number,
+			required: true,
+		},
+		width: {
+			type: Number,
+			required: true,
+		},
+		fins: {
 			type: String,
 			required: true,
 		},
@@ -21,4 +29,4 @@ const exampleSchema = new mongoose.Schema(
 	}
 )
 
-module.exports = mongoose.model('Example', exampleSchema)
+module.exports = mongoose.model('Surfboard', surfboard)
